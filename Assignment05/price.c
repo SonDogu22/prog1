@@ -51,5 +51,4 @@ int main(void) {
     // todo: call price_test function
     price_test();
     return 0;
-
 }
