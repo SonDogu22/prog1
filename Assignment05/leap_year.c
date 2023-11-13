@@ -1,3 +1,5 @@
+#include "base.h" // prog1lib
+
 int number_of_days(int year){
    if (year % 4 == 0 && year % 100!= 0){
     if (year%400 != 0)
@@ -21,4 +23,5 @@ void test_number_of_days(void){
 
 int main(voic){
     test_number_of_days();
+    return 0;
 }
