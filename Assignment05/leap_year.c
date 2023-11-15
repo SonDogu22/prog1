@@ -21,7 +21,7 @@ void test_number_of_days(void){
     test_equal_i(number_of_days(2020),366);
 }
 
-int main(voic){
+int main(void){
     test_number_of_days();
     return 0;
 }
