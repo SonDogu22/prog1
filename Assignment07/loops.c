@@ -96,8 +96,6 @@ void loops_d(int n) {
 
 
 void loops_e(int n){
-    int  o = 0;
-    int c = n;
 
     if(n>= 3){
 
@@ -118,7 +116,7 @@ void loops_e(int n){
                 for (int i = 1; i <=n - y; i++)
                 {
 
-                    printf("-");
+                    printf(" ");
             
                 }
                 
