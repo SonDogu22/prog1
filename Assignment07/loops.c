@@ -95,10 +95,83 @@ void loops_d(int n) {
 }
 
 // todo: implement helper functions for loops_e (recommended)
-
-void loops_e(int n) {
-    // todo: implement
+void printPlus(int p){
+    printf("+");
+    for(int i = 0; i < p - 2; i++){
+        printf("-");
+    }
+    printf("+\n");
 }
+
+/*
+void loops_e(int n) {
+    if(n >= 3){
+        for(int i = 0; i < n; i++){
+            for(int x = n; x <= 0; x--){
+                printf(".");
+                printPlus(n);
+            }
+            printf("/");
+            for(int j = 1; j < n - 2; j++){
+                printf(" ");
+            }
+            printf("/\n");
+        }
+        printPlus(n);
+    }
+
+}
+*/
+void loops_e(int n){
+    int  o = 0;
+    int c = n;
+
+    if(n>= 3){
+
+
+            for(int j = 1; j < n + 2 ; j++){
+                printf(" ");
+            }
+
+            printf("+");
+            for (int y = 0; y < n - 2; y++)
+            {
+                printf("-");
+            }
+            printf("+\n");
+            
+            for (int y = 1; y <= n; y++)
+            {   
+                for (int i = 1; i <=n - y; i++)
+                {
+
+                    printf("-");
+            
+                }
+                
+                printf("/");
+                
+                for (int i = 1; i <= n; i++)
+                {
+                    printf(" ");
+                }
+                
+                printf("/\n"); 
+            }
+            
+
+            printf("+");
+
+            for (int y = 0; y < n - 2; y++)
+            {
+                printf("-");
+            }
+            printf("+\n");
+        
+    }
+}
+
+
 
 // todo: implement helper functions for loops_f (recommended)
 
