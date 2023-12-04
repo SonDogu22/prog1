@@ -7,12 +7,81 @@ typedef struct better_array_s {
 
 //todo: a)
 bool compare(int *array_a, int length_a, int *array_b, int length_b) {
-    return false;
+
+    if (length_a == length_b && array_a != NULL && array_b != NULL)    
+    {
+        if (length_a < 0 && length_b < 0)
+        {
+            return false;
+        }
+        
+        for (int i = 0; i < length_a;)
+        {
+            if (array_a[i] == array_b[i])
+            {
+                i++;
+            }else if (array_a[i] != array_b[i])
+            {
+                return false;
+            }
+        }
+        return true;
+        
+    }else if ( array_a != NULL || array_b != NULL)
+    {
+        return false;
+    }else{
+        return true;
+    }
 }
 
 //todo: b)
 int remove_negatives(int* array, int length) {
-    return length;
+    int counter = 0;
+
+
+    for (int i = 0; i < length; i++)
+    {
+        if (array[i] < 0)
+        {
+            counter++;
+        }
+        
+    }
+
+    int a[counter];
+    for (int i = 0; i < length; i++)
+    {
+        int b = i;
+        if ((isNegative(array[i])))
+        {
+            b++;
+        }
+
+        if (!(isNegative(array[i])))
+        {
+            a[i] = array[i];
+        }
+        
+        
+    }
+    
+    
+    return counter;
+}
+
+bool isNegative(int a){
+    if ( a < 0)
+    {
+        return true;
+    }
+
+    if ( a > 0)
+    {
+        return false;
+    }
+    
+    
 }
 
 //todo: c)
