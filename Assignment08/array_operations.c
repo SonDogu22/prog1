@@ -35,41 +35,6 @@ bool compare(int *array_a, int length_a, int *array_b, int length_b) {
     }
 }
 
-//todo: b)
-int remove_negatives(int* array, int length) {
-    int counter = 0;
-
-
-    for (int i = 0; i < length; i++)
-    {
-        if (array[i] < 0)
-        {
-            counter++;
-        }
-        
-    }
-
-    int a[counter];
-    for (int i = 0; i < length; i++)
-    {
-        int b = i;
-        if ((isNegative(array[i])))
-        {
-            b++;
-        }
-
-        if (!(isNegative(array[i])))
-        {
-            a[i] = array[i];
-        }
-        
-        
-    }
-    
-    
-    return counter;
-}
-
 bool isNegative(int a){
     if ( a < 0)
     {
@@ -80,9 +45,48 @@ bool isNegative(int a){
     {
         return false;
     }
+
+    return false;
     
     
 }
+
+void printArray(int* a, int size){
+    for (int i = 0; i < size; i++)
+    {
+        printf("[");
+        printf("%d", a[i]);
+        printf("]");
+    }
+
+    printf("\n");
+    
+}
+
+//todo: b)
+int remove_negatives(int* array, int length) {
+    int*tmp = &length;
+    int counter = *tmp;
+    int sub = 0;
+
+    for (int i = 0; i < counter; i++)
+    {
+       if (array[i] >= 0)
+       {
+        int*temp = &array[i];
+        array[i + sub] = *temp;
+       }
+       if (array[i] < 0)
+       {
+        length--;
+        sub--;
+       }
+    }
+
+    return length;
+}
+
+
 
 //todo: c)
 BetterArray intersect(int *array_a, int length_a, int* array_b, int length_b) {
